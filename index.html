@@ -17,9 +17,7 @@
   
     <link rel="alternative" href="/atom.xml" title="千承的博客" type="application/atom+xml">
   
-  
-    <link rel="icon" href="/favicon.png">
-  
+    <link rel="icon" href="source/img/coderwall.png">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 <body>
@@ -199,6 +197,69 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-httpmethod" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/01/httpmethod/" class="article-date">
+  	<time datetime="2015-08-01T09:25:02.000Z" itemprop="datePublished">2015-08-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/01/httpmethod/">httpmethod</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry  article-entry-index " itemprop="articleBody">
+      
+        <h2 id="1-_GET">1. GET</h2><p>get方法是最常见的请求方法，通常用于向服务器请求(获取)某个资源。</p>
+<p>发送一个get请求一般会附带一些参数，这些参数会附在请求链接的后面，由此可见，get方法安全性较低，不适合在对安全性要求较高的场合使用。</p>
+<p>一般get请求能向服务器请求的数据量较小。</p>
+<h2 id="2-_POST">2. POST</h2><p>post方法通常用于向服务器发送数据。</p>
+<p>通过post方法发送的数据是不会被附加到请求链接之后的，一般来说安全性比较高。</p>
+<p>post请求向服务器发送的数据量相对是比较大的，一般在提交表单时候常用post方法。</p>
+<h2 id="3-_PUT">3. PUT</h2><p>PUT让服务器用请求的主体部分来创建一个由所请求的URL命名的新文档。或者，如果那个URL已经存在的话，就用这个主体替代它。</p>
+<h2 id="4-_TRACE">4. TRACE</h2><p>TRACE会在目的服务器端发起一个环回诊断，最后一站的服务器会弹回一个TRACE响应并在响应主体中携带它收到的原始请求报文。</p>
+<p>TRACE方法主要用于诊断，用于验证请求是否如愿穿过了请求/响应链。</p>
+<h2 id="5-_HEAD">5. HEAD</h2><p>HEAD与GET类似，但服务器在响应中只返回首部，不返回实体的主体部分。</p>
+<h2 id="6-_OPTIONS">6. OPTIONS</h2><p>OPTIONS方法请求web服务器告知其支持的各种功能。</p>
+<p>可以查询服务器支持哪些方法或者对某些特殊资源支持哪些方法。</p>
+<h2 id="7-_DELETE">7. DELETE</h2><p>DELETE请求服务器删除请求URL指定的资源。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-javascript-deepclone" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -703,7 +764,7 @@ equivalent of <span class="variable">&lt;code&gt;</span>&amp;amp;mdash;<span cla
 </code></pre><p>邮址的自动链接也很类似，只是 Markdown 会先做一个编码转换的过程，把文字字符转成 16 进位码的 HTML 实体，这样的格式可以糊弄一些不好的邮址收集机器人，例如：</p>
 <pre><code><span class="tag">&lt;address@example.com&gt;</span>
 </code></pre><p>Markdown 会转成：</p>
-<p><a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x62;&#97;&#x69;&#106;&#105;&#x6e;&#103;&#117;&#111;&#x31;&#x39;&#x39;&#49;&#64;&#x31;&#x36;&#x33;&#x2e;&#99;&#111;&#109;">&#x62;&#97;&#x69;&#106;&#105;&#x6e;&#103;&#117;&#111;&#x31;&#x39;&#x39;&#49;&#64;&#x31;&#x36;&#x33;&#x2e;&#99;&#111;&#109;</a></p>
+<p><a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#98;&#x61;&#105;&#x6a;&#105;&#110;&#x67;&#117;&#x6f;&#x31;&#57;&#57;&#x31;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;">&#98;&#x61;&#105;&#x6a;&#105;&#110;&#x67;&#117;&#x6f;&#x31;&#57;&#57;&#x31;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;</a></p>
 <pre><code>&lt;a href=<span class="string">"&amp;#x6D;&amp;#x61;i&amp;#x6C;&amp;#x74;&amp;#x6F;:&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;
 &amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6C;e&amp;#x2E;&amp;#99;&amp;#111;
 &amp;#109;"</span>&gt;&amp;<span class="title">#x61</span>;&amp;<span class="title">#x64</span>;&amp;<span class="title">#x64</span>;&amp;<span class="title">#x72</span>;&amp;<span class="title">#x65</span>;&amp;<span class="title">#115</span>;&amp;<span class="title">#115</span>;&amp;<span class="title">#64</span>;&amp;<span class="title">#101</span>;&amp;<span class="title">#120</span>;&amp;<span class="title">#x61</span>;
