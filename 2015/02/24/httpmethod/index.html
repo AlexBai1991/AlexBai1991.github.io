@@ -3,18 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Javascript中的深拷贝 | 千承的博客</title>
+  <title>常见的http方法介绍 | 千承的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 第一种实现方法123456789101112131415161718function copy (obj) &amp;#123;    if (typeof obj !== &apos;object&apos; || obj === null) &amp;#123;        return obj;    &amp;#125;    var copyObj,        _toString = Object.prototype.">
+  <meta name="description" content="1. GETget方法是最常见的请求方法，通常用于向服务器请求(获取)某个资源。
+发送一个get请求一般会附带一些参数，这些参数会附在请求链接的后面，由此可见，get方法安全性较低，不适合在对安全性要求较高的场合使用。
+一般get请求能向服务器请求的数据量较小。
+2. POSTpost方法通常用于向服务器发送数据。
+通过post方法发送的数据是不会被附加到请求链接之后的，一般来说安全性比较高。
+p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript中的深拷贝">
-<meta property="og:url" content="http://yoursite.com/2015/08/01/javascript-deepclone/index.html">
+<meta property="og:title" content="常见的http方法介绍">
+<meta property="og:url" content="http://yoursite.com/2015/02/24/httpmethod/index.html">
 <meta property="og:site_name" content="千承的博客">
-<meta property="og:description" content="1. 第一种实现方法123456789101112131415161718function copy (obj) &amp;#123;    if (typeof obj !== &apos;object&apos; || obj === null) &amp;#123;        return obj;    &amp;#125;    var copyObj,        _toString = Object.prototype.">
-<meta property="og:updated_time" content="2015-08-02T02:37:52.000Z">
+<meta property="og:description" content="1. GETget方法是最常见的请求方法，通常用于向服务器请求(获取)某个资源。
+发送一个get请求一般会附带一些参数，这些参数会附在请求链接的后面，由此可见，get方法安全性较低，不适合在对安全性要求较高的场合使用。
+一般get请求能向服务器请求的数据量较小。
+2. POSTpost方法通常用于向服务器发送数据。
+通过post方法发送的数据是不会被附加到请求链接之后的，一般来说安全性比较高。
+p">
+<meta property="og:updated_time" content="2015-08-02T13:39:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascript中的深拷贝">
-<meta name="twitter:description" content="1. 第一种实现方法123456789101112131415161718function copy (obj) &amp;#123;    if (typeof obj !== &apos;object&apos; || obj === null) &amp;#123;        return obj;    &amp;#125;    var copyObj,        _toString = Object.prototype.">
+<meta name="twitter:title" content="常见的http方法介绍">
+<meta name="twitter:description" content="1. GETget方法是最常见的请求方法，通常用于向服务器请求(获取)某个资源。
+发送一个get请求一般会附带一些参数，这些参数会附在请求链接的后面，由此可见，get方法安全性较低，不适合在对安全性要求较高的场合使用。
+一般get请求能向服务器请求的数据量较小。
+2. POSTpost方法通常用于向服务器发送数据。
+通过post方法发送的数据是不会被附加到请求链接之后的，一般来说安全性比较高。
+p">
   
     <link rel="alternative" href="/atom.xml" title="千承的博客" type="application/atom+xml">
   
@@ -193,11 +208,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-javascript-deepclone" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-httpmethod" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/01/javascript-deepclone/" class="article-date">
-  	<time datetime="2015-08-01T08:42:40.000Z" itemprop="datePublished">2015-08-01 16:42</time>
+      <a href="/2015/02/24/httpmethod/" class="article-date">
+  	<time datetime="2015-02-24T09:25:02.000Z" itemprop="datePublished">2015-02-24 17:25</time>
 </a>
     </div>
   
@@ -210,7 +225,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Javascript中的深拷贝
+      常见的http方法介绍
     </h1>
   
 
@@ -218,10 +233,6 @@
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
-	</div>
-
         
 
         <div class="clearfix"></div>
@@ -230,10 +241,19 @@
     
     <div class="article-entry " itemprop="articleBody">
       
-        <h2 id="1-_第一种实现方法">1. 第一种实现方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">copy</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> obj !== <span class="string">'object'</span> || obj === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> copyObj,</span><br><span class="line">        _toString = <span class="built_in">Object</span>.prototype.toString;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (_toString.call(obj) === <span class="string">'[object Object]'</span>) &#123;</span><br><span class="line">        copyObj = &#123;&#125;;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (_toString.call(obj) === <span class="string">'[object Array]'</span>) &#123;</span><br><span class="line">        copyObj = [];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> name <span class="keyword">in</span> obj) &#123;</span><br><span class="line">        copyObj[name] = copy(obj[name]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> copyObj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>主要思路就是通过层层递归调用。</p>
-<h2 id="2-_第二种实现方法">2. 第二种实现方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">copy</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> copyObj = <span class="built_in">Object</span>.create(<span class="built_in">Object</span>.getPrototypeOf(obj));</span><br><span class="line">    <span class="keyword">var</span> propNames = <span class="built_in">Object</span>.getOwnPropertyNames(obj);</span><br><span class="line"></span><br><span class="line">    propNames.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> desc = <span class="built_in">Object</span>.getOwnPropertyDescriptor(obj, name);</span><br><span class="line">        <span class="built_in">Object</span>.defineProperty(copyObj, name, desc);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> copyObj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>主要是通过原生对象的关键方法实现。</p>
+        <h2 id="1-_GET">1. GET</h2><p>get方法是最常见的请求方法，通常用于向服务器请求(获取)某个资源。</p>
+<p>发送一个get请求一般会附带一些参数，这些参数会附在请求链接的后面，由此可见，get方法安全性较低，不适合在对安全性要求较高的场合使用。</p>
+<p>一般get请求能向服务器请求的数据量较小。</p>
+<h2 id="2-_POST">2. POST</h2><p>post方法通常用于向服务器发送数据。</p>
+<p>通过post方法发送的数据是不会被附加到请求链接之后的，一般来说安全性比较高。</p>
+<p>post请求向服务器发送的数据量相对是比较大的，一般在提交表单时候常用post方法。</p>
+<h2 id="3-_PUT">3. PUT</h2><p>PUT让服务器用请求的主体部分来创建一个由所请求的URL命名的新文档。或者，如果那个URL已经存在的话，就用这个主体替代它。</p>
+<h2 id="4-_TRACE">4. TRACE</h2><p>TRACE会在目的服务器端发起一个环回诊断，最后一站的服务器会弹回一个TRACE响应并在响应主体中携带它收到的原始请求报文。</p>
+<p>TRACE方法主要用于诊断，用于验证请求是否如愿穿过了请求/响应链。</p>
+<h2 id="5-_HEAD">5. HEAD</h2><p>HEAD与GET类似，但服务器在响应中只返回首部，不返回实体的主体部分。</p>
+<h2 id="6-_OPTIONS">6. OPTIONS</h2><p>OPTIONS方法请求web服务器告知其支持的各种功能。</p>
+<p>可以查询服务器支持哪些方法或者对某些特殊资源支持哪些方法。</p>
+<h2 id="7-_DELETE">7. DELETE</h2><p>DELETE请求服务器删除请求URL指定的资源。</p>
 
       
     </div>
@@ -243,18 +263,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/08/01/httpmethod/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/03/01/javascript-deepclone/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          常见的http方法介绍
+          Javascript中的深拷贝
         
       </div>
     </a>
   
   
-    <a href="/2015/08/01/css弹性盒子模型/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS中的弹性盒子模型</div>
+    <a href="/2015/02/11/new-post/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Markdown学习笔记</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
