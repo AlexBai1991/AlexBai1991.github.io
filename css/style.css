@@ -1252,7 +1252,7 @@ a {
   text-align: right;
   position: absolute;
   right: 0;
-  top: 23px;
+  top: 30px;
   text-align: center;
   z-index: 1;
 }
@@ -1263,6 +1263,20 @@ a {
   color: #999;
   content: "\f073";
   font: 17px FontAwesome;
+  margin-right: 10px;
+}
+.back-to-main {
+  position: absolute;
+  right: 5px;
+  top: 4px;
+}
+.back-to-main a {
+  color: #999;
+}
+.back-to-main a:before {
+  content: "\f112";
+  font: 17px FontAwesome;
+  color: #999;
   margin-right: 10px;
 }
 .article-more-link {
