@@ -1252,7 +1252,7 @@ a {
   text-align: right;
   position: absolute;
   right: 0;
-  top: 30px;
+  top: 18px;
   text-align: center;
   z-index: 1;
 }
@@ -1268,7 +1268,8 @@ a {
 .back-to-main {
   position: absolute;
   right: 5px;
-  top: 4px;
+  top: 40px;
+  z-index: 1;
 }
 .back-to-main a {
   color: #999;
@@ -1278,6 +1279,12 @@ a {
   font: 17px FontAwesome;
   color: #999;
   margin-right: 10px;
+}
+.back-to-main a:hover {
+  color: #44b78b;
+}
+.back-to-main a:hover:before {
+  color: #44b78b;
 }
 .article-more-link {
   margin-top: 5px;
