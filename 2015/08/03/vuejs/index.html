@@ -3,21 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>CSS中的弹性盒子模型 | 千承的博客</title>
+  <title>vuejs | 千承的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。对于很多应用来讲，弹性盒改进了块模型，既不使用浮动，也不会在弹性盒容器与其内容之间合并外边距。
-1. 新版Flex Box定义弹性盒模型通过对父级元素设置display属性为flex | inline-flex属性定义该父级容器为弹性盒。为了兼容性，">
+  <meta name="description" content="REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS中的弹性盒子模型">
-<meta property="og:url" content="http://yoursite.com/2015/05/08/css弹性盒子模型/index.html">
+<meta property="og:title" content="vuejs">
+<meta property="og:url" content="http://yoursite.com/2015/08/03/vuejs/index.html">
 <meta property="og:site_name" content="千承的博客">
-<meta property="og:description" content="CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。对于很多应用来讲，弹性盒改进了块模型，既不使用浮动，也不会在弹性盒容器与其内容之间合并外边距。
-1. 新版Flex Box定义弹性盒模型通过对父级元素设置display属性为flex | inline-flex属性定义该父级容器为弹性盒。为了兼容性，">
-<meta property="og:updated_time" content="2015-08-03T09:42:20.000Z">
+<meta property="og:description" content="REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
+<meta property="og:updated_time" content="2015-08-03T03:22:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS中的弹性盒子模型">
-<meta name="twitter:description" content="CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。对于很多应用来讲，弹性盒改进了块模型，既不使用浮动，也不会在弹性盒容器与其内容之间合并外边距。
-1. 新版Flex Box定义弹性盒模型通过对父级元素设置display属性为flex | inline-flex属性定义该父级容器为弹性盒。为了兼容性，">
+<meta name="twitter:title" content="vuejs">
+<meta name="twitter:description" content="REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
   
     <link rel="alternative" href="/atom.xml" title="千承的博客" type="application/atom+xml">
   
@@ -196,12 +193,12 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-css弹性盒子模型" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-vuejs" class="article article-type-post" itemscope itemprop="blogPost">
 
   
     <div class="article-meta">
-      <a href="/2015/05/08/css弹性盒子模型/" class="article-date">
-  	<time datetime="2015-05-08T08:35:21.000Z" itemprop="datePublished">2015-05-08 16:35</time>
+      <a href="/2015/08/03/vuejs/" class="article-date">
+  	<time datetime="2015-08-03T03:21:06.000Z" itemprop="datePublished">2015-08-03 11:21</time>
 </a>
     </div>
   
@@ -218,7 +215,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      CSS中的弹性盒子模型
+      vuejs
     </h1>
   
 
@@ -226,10 +223,6 @@
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-	</div>
-
         
 
         <div class="clearfix"></div>
@@ -238,20 +231,7 @@
     
     <div class="article-entry " itemprop="articleBody">
       
-        <p>CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。对于很多应用来讲，弹性盒改进了块模型，既不使用浮动，也不会在弹性盒容器与其内容之间合并外边距。</p>
-<h1 id="1-_新版Flex_Box"><strong>1. 新版Flex Box</strong></h1><h3 id="定义弹性盒模型">定义弹性盒模型</h3><p>通过对父级元素设置display属性为<code>flex | inline-flex</code>属性定义该父级容器为弹性盒。<br>为了兼容性，注意要带上浏览器的厂商表示前缀。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.flexbox</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> flex</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> -webkit-flex</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="flex各属性介绍">flex各属性介绍</h3><p><code>flex: flex-grow | flex-shrink | flex-basis;</code><br>flex 是一个简写属性，它包括以下三个值：</p>
-<p>flex-grow: 默认值为0，定义了弹性盒中的子元素的拉伸因子，通过这个属性去等比划分弹性盒的宽度，注意这里划分的弹性盒父容器的宽度是除了文字等内容之外的剩余宽度。<br>flex-shrink: 默认为1，定义了弹性盒中的子元素的收缩因子，通过这个属性去等比收缩相应的宽度。<br>flex-basis: 默认为auto，定义了弹性盒中的子元素拉伸或者收缩的基准值，注意这个属性和flex-grow配合使用。</p>
-<p><code>flex-flow: flex-direction | flex-wrap;</code><br>flex-flow是一个简写属性，它包括以下两个值：</p>
-<p>flex-direction: 默认值为row，可取值有 row-reverse | column | column-reverse，定义了弹性盒中的子元素的排列方向。<br>flex-wrap: 默认值为nowrap，可取值有 wrap | wrap-reverse，定义了弹性盒中的子元素超出父容器时是否换行。 </p>
-<p>align-content: 默认值为stretch，可取值有 flex-start | flex-end | center | space-between | space-around，定义了弹性盒中子元素的竖直方向排列方式，它适用于多行的弹性盒模型。</p>
-<p>align-items: 默认值为stretch，可取值为 flex-start | flex-end | center | baseline，定义了弹性盒中的子元素的竖直方向的排列方式，它适用于单行的弹性盒模型。</p>
-<p>align-self: 默认值为stretch，可取值为 flex-start | flex-end | center | baseline，定义了弹性盒子元素在弹性盒父容器中的竖直排列方式，它适用于弹性盒的子元素。</p>
-<p>justify-content: 默认值为flex-start，可取值为 flex-start | flex-end | center | space-between | space-around，定义了弹性盒中的子元素在水平方向的排列方式。</p>
-<p>order: 用整数值来定义排列顺序，数值小的排在前面。可以为负值。</p>
-<h1 id="2-_旧版Flex_Box"><strong>2. 旧版Flex Box</strong></h1><h1 id="3-_参考文献"><strong>3. 参考文献</strong></h1><p><a href="http://css.doyoe.com/" target="_blank" rel="external">『http://css.doyoe.com/』</a></p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Flexible_boxes" target="_blank" rel="external">『https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Flexible_boxes』</a></p>
+        <h1 id="REF">REF</h1><p><a href="http://tw93.github.io/2015-02-04/vue-angular-avalon-1.html" target="_blank" rel="external">Vue.js &amp; Angular.js &amp; Avalon.js</a></p>
 
       
     </div>
@@ -261,18 +241,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/06/12/CSS学习/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          CSS中的媒体查询
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/04/02/csstwocolumn/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS中的两栏等高布局</div>
+    <a href="/2015/06/12/CSS学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS中的媒体查询</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
