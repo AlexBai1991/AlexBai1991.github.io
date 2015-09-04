@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>MVC, MVP, MVVM | 千承的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="MVCMVC是一种架构设计模式，它将应用分割成业务数据（Model）、用户界面（View）、控制逻辑（Controller）三个部分，其架构图大致是这个样子：
+MVC架构图Model（模型）Model管理应用程序的数据，Model主要与业务数据相关，其不涉及控制层和表示层逻辑。当Model改变时，它会通过Observer模式（Publish/Subscribe）通知观察它的View，一个Model">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MVC, MVP, MVVM">
+<meta property="og:url" content="http://yoursite.com/2015/08/15/post/index.html">
+<meta property="og:site_name" content="千承的博客">
+<meta property="og:description" content="MVCMVC是一种架构设计模式，它将应用分割成业务数据（Model）、用户界面（View）、控制逻辑（Controller）三个部分，其架构图大致是这个样子：
+MVC架构图Model（模型）Model管理应用程序的数据，Model主要与业务数据相关，其不涉及控制层和表示层逻辑。当Model改变时，它会通过Observer模式（Publish/Subscribe）通知观察它的View，一个Model">
+<meta property="og:updated_time" content="2015-08-15T04:03:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MVC, MVP, MVVM">
+<meta name="twitter:description" content="MVCMVC是一种架构设计模式，它将应用分割成业务数据（Model）、用户界面（View）、控制逻辑（Controller）三个部分，其架构图大致是这个样子：
+MVC架构图Model（模型）Model管理应用程序的数据，Model主要与业务数据相关，其不涉及控制层和表示层逻辑。当Model改变时，它会通过Observer模式（Publish/Subscribe）通知观察它的View，一个Model">
+  
+    <link rel="alternative" href="/atom.xml" title="千承的博客" type="application/atom+xml">
+  
+    <link rel="icon" href="source/img/coderwall.png">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/portrait.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Alex Bai</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">快乐学习，快乐生活</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/aboutme">关于</a></li>
+				        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/闲谈/" style="font-size: 10px;">闲谈</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://bbs.byr.cn">北邮人论坛</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.html-js.com/">前端乱炖</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.w3cplus.com/">w3cplus</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">前端攻城狮一枚，爱好篮球足球，喜欢各种新奇玩意......</div>
+				</section>
+				
+			</div>
+		</div>
+
+					
+	</header>				
+</div>
+<nav class="contact-nav">
+	<div class="social">
+		
+			<a class="github" target="_blank" href="https://github.com/AlexBai1991" title="github">github</a>
+        
+			<a class="weibo" target="_blank" href="http://weibo.com/2465055362/profile?topnav=1&wvr=6" title="weibo">weibo</a>
+        
+			<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+        
+			<a class="mail" target="_blank" href="/alexbai1991@gmail.com" title="mail">mail</a>
+        
+	</div>
+</nav>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Alex Bai</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/portrait.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Alex Bai</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">快乐学习，快乐生活</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/aboutme">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/AlexBai1991" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/2465055362/profile?topnav=1&wvr=6" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="/alexbai1991@gmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-post" class="article article-type-post" itemscope itemprop="blogPost">
+
+  
+    <div class="article-meta">
+      <a href="/2015/08/15/post/" class="article-date">
+  	<time datetime="2015-08-15T03:54:53.000Z" itemprop="datePublished">2015-08-15 11:54</time>
+</a>
+    </div>
+  
+  
+    <div class="back-to-main"><a href="/">返回</a></div>
+  
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MVC, MVP, MVVM
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <h1 id="MVC">MVC</h1><p>MVC是一种架构设计模式，它将应用分割成业务数据（Model）、用户界面（View）、控制逻辑（Controller）三个部分，其架构图大致是这个样子：</p>
+<h2 id="MVC架构图">MVC架构图</h2><h3 id="Model（模型）">Model（模型）</h3><p>Model管理应用程序的数据，Model主要与业务数据相关，其不涉及控制层和表示层逻辑。当Model改变时，它会通过Observer模式（Publish/Subscribe）通知观察它的View，一个Model可以有多个观察它的View。</p>
+<p>Model与View和Controller的关系</p>
+<p>Model本身不涉及View和Controller的逻辑，它只在乎业务数据模型，并提供相应的接口对其内部数据进行CRUD操作</p>
+<p>View（视图）</p>
+<p>视图用于将Model中的业务数据进行展示。在Smalltalk的MVC中，视图通常是绘制和维护位图，而在浏览器中，View通常是负责DOM元素的操作。</p>
+<p>View与Model的关系</p>
+<p>当一个Model改变时，它会通知所有观察这个Model的View，而这个View在收到通知之后，根据Model中的数据进行相应的更新。</p>
+<p>View与Controller的关系</p>
+<p>用于也可以和View（视图）进行交互，包括读取和编辑Model的数据，但由于View是表示层，但一般不使用View直接对Model中的数据进行修改，这个修改过程通常交给Controller来做。View在与用户交互时，在用户操作之后，View不会去了解下一步做什么，而是将用户操作交给Controller来做决定</p>
+<p>视图与模板</p>
+<p>使用structs+JSP的开发者（或是Express+jade之类的），容易误以为JSP这样的模板就是View视图，但实际上模板只是部分（也可能是全部）View的声明方式，通过模板的规范来生成View，但不代表View的全部。比如Angular中，使用带指令（如ng-hide,ng-show,ng-repeat）的模板来生成DOM节点，其属于View，但实际上如果在Angular中根据scope的属性方法来修改DOM节点（如$scope.$watch），这也属于View范畴</p>
+<p>Controller（控制器）</p>
+<p>Controller中介于Model和View之间，当用户与View进行交互，操作了View之后，它负责更新Model</p>
+<p>Controller与Model</p>
+<p>Controller根据View与用户的交互，来直接对Model进行操作。</p>
+<p>Controller与View</p>
+<p>事实上可以理解为Controller为View的策略模式的一个实现。View只是负责与用户交互，其具体应该做的工作交给Controller来决定</p>
+<p>MVC模式总结</p>
+<p>MVC将应用程序功能模块化，分离出Model、View和Controller三个部分，互相解耦，使得整体维护更加容易。MVC依赖Observer模式（或是Publish/Subscribe实现）来实现它的核心通信</p>
+<p>MVP</p>
+<p>MVP模式（模型-视图-表示器）是MVC设计模式的一种衍生模式，专注于改进表示逻辑。MVP中的P为Presenter（表示器），它包含用于View的用户界面业务逻辑的组件，与MVC中不同的是，在Model进行改变之后，它不会直接通知View，而是将修改封装为事件（Events）来通知Presenter，Persenter来与View通信，具体的架构图如下所示：</p>
+<p>MVP模式架构图</p>
+<p>Presenter（表示器）</p>
+<p>Presenter与Controller相同的是，其依旧介于Model和View之间，但不同的地方在于，在MVC中，Model在改变后会直接通知View而不会经过Controller，在MVP中，Model会将其改变封装成一个事件（或是主题），通过Publish/Subscribe模式来传递给Presenter，然后Presenter将更新交给View</p>
+<p>Presenter与View的关系</p>
+<p>Presenter与View的关系与MVC中Controller与View的关系大体相同，但增加了将Model的修改交给View的职责，数据通过调用View的接口来传递</p>
+<p>Presenter与Model的关系</p>
+<p>Presenter与Modle是一个典型的Pubsub，Presenter作为Subscriber，其订阅了Model的修改事件（主题）。而Model作为Publisher在其数据进行修改后，触发这个事件</p>
+<p>MVP模式总结</p>
+<p>MVP通过将MVC的Model和View的关系进行改变，使得Model和View进一步解耦，这样Presenter所担任的工作也就相对于MVC中的仅对Model进行更新而有所增加。各个组件直接的数据通信也更易于通过Presenter进行把控</p>
+<p>MVVM</p>
+<p>MVVM模式(模型-视图-视图模型)是一种基于MVC和MVP的架构模式，它试图更清晰的将用户界面（UI）开发从应用程序的业务逻辑与行为中分离。它采用了MVP中View和Model的解耦方式，而在View和ViewModel之间也通过Pubsub模式和数据绑定来进行通信，其架构图如下所示：</p>
+<p>MVVM架构图</p>
+<p>ViewModel（视图模型）</p>
+<p>与MVP中的Presenter一样，MVVM中的ViewModel依旧介于View和Model之间。可以将其作为一个专门的Controller，充当数据的转换器，将Model的信息进行适合View的信息，从这个层面上，Viewodel更应该被看做另一个Model。</p>
+<p>ViewModel与Model</p>
+<p>ViewModel与Model在通信方式上与MVP几乎没什么差异，但ViewModel在指责上不再只是将Model中的数据传递给View，其将处理View中的显示逻辑，对Model中的业务数据根据需要进行包装，包装成适配View的数据模型</p>
+<p>ViewModel与View</p>
+<p>与Controller和Presenter所不关心显示逻辑不同的是，ViewModel会处理大部分显示逻辑，并暴露一些方法用于保持View的状态。来源于Model的数据会根据显示逻辑进行包装后，通过Pubsub模式与View进行通信，这里View作为Subscriber而ViewModel作为Publisher。而View层将数据传递给ViewModel则是通过了数据绑定的形式，View处理自己的用户界面事件，必要时将他们映射到ViewModel中</p>
+<p>MVVM总结</p>
+<p>MVVM专注于将UI开发从应用程序业务逻辑与行为分离，通过ViewModel为UI开发提供了更加友好的数据，使得UI开发更加容易。但需要注意的是用于实现数据绑定可能产生大量的标记，且MVVM并不适合UI简单的情况</p>
+<p>总结</p>
+<p>现有的一些前端框架如Backbone，Angular的等等都是基于MVC模式来进行模块的划分和相互通信的。理解MVC模式在JavaScript中的应用时理解这些库实现方式的基础</p>
+<p>参考</p>
+<p><a href="http://segmentfault.com/q/1010000000307033" target="_blank" rel="external">http://segmentfault.com/q/1010000000307033</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/08/03/vuejs/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vuejs</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Alex Bai
+    	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
