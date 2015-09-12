@@ -3,23 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>MVC, MVP, MVVM | 千承的博客</title>
+  <title>MVC, MVP, MVVM | 白进国</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MVCMVC是一种架构设计模式，它将应用分割成业务数据（Model）、用户界面（View）、控制逻辑（Controller）三个部分，其架构图大致是这个样子：
-MVC架构图Model（模型）Model管理应用程序的数据，Model主要与业务数据相关，其不涉及控制层和表示层逻辑。当Model改变时，它会通过Observer模式（Publish/Subscribe）通知观察它的View，一个Model">
+  <meta name="description" content="MVCMVC是一种架构设计模式，它将应用分割成业务数据（Model）、用户界面（View）、控制逻辑（Controller）三个部分，其架构图大致是这个样子：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MVC, MVP, MVVM">
 <meta property="og:url" content="http://yoursite.com/2015/08/15/post/index.html">
-<meta property="og:site_name" content="千承的博客">
-<meta property="og:description" content="MVCMVC是一种架构设计模式，它将应用分割成业务数据（Model）、用户界面（View）、控制逻辑（Controller）三个部分，其架构图大致是这个样子：
-MVC架构图Model（模型）Model管理应用程序的数据，Model主要与业务数据相关，其不涉及控制层和表示层逻辑。当Model改变时，它会通过Observer模式（Publish/Subscribe）通知观察它的View，一个Model">
-<meta property="og:updated_time" content="2015-08-15T04:03:17.000Z">
+<meta property="og:site_name" content="白进国">
+<meta property="og:description" content="MVCMVC是一种架构设计模式，它将应用分割成业务数据（Model）、用户界面（View）、控制逻辑（Controller）三个部分，其架构图大致是这个样子：">
+<meta property="og:updated_time" content="2015-09-12T02:20:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MVC, MVP, MVVM">
-<meta name="twitter:description" content="MVCMVC是一种架构设计模式，它将应用分割成业务数据（Model）、用户界面（View）、控制逻辑（Controller）三个部分，其架构图大致是这个样子：
-MVC架构图Model（模型）Model管理应用程序的数据，Model主要与业务数据相关，其不涉及控制层和表示层逻辑。当Model改变时，它会通过Observer模式（Publish/Subscribe）通知观察它的View，一个Model">
+<meta name="twitter:description" content="MVCMVC是一种架构设计模式，它将应用分割成业务数据（Model）、用户界面（View）、控制逻辑（Controller）三个部分，其架构图大致是这个样子：">
   
-    <link rel="alternative" href="/atom.xml" title="千承的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="白进国" type="application/atom+xml">
   
     <link rel="icon" href="source/img/coderwall.png">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
@@ -40,8 +37,6 @@ MVC架构图Model（模型）Model管理应用程序的数据，Model主要与�
 		  <h1 class="header-author"><a href="/">Alex Bai</a></h1>
 		</hgroup>
 
-		
-		<p class="header-subtitle">快乐学习，快乐生活</p>
 		
 
 		
@@ -105,7 +100,7 @@ MVC架构图Model（模型）Model管理应用程序的数据，Model主要与�
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/闲谈/" style="font-size: 10px;">闲谈</a>
+						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/闲谈/" style="font-size: 10px;">闲谈</a>
 					</div>
 				</section>
 				
@@ -165,8 +160,6 @@ MVC架构图Model（模型）Model管理应用程序的数据，Model主要与�
 			<hgroup>
 			  <h1 class="header-author">Alex Bai</h1>
 			</hgroup>
-			
-			<p class="header-subtitle">快乐学习，快乐生活</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -234,7 +227,7 @@ MVC架构图Model（模型）Model管理应用程序的数据，Model主要与�
     
     <div class="article-entry " itemprop="articleBody">
       
-        <h1 id="MVC">MVC</h1><p>MVC是一种架构设计模式，它将应用分割成业务数据（Model）、用户界面（View）、控制逻辑（Controller）三个部分，其架构图大致是这个样子：</p>
+        <h1 id="MVC">MVC</h1><p>MVC是一种架构设计模式，它将应用分割成业务数据（Model）、用户界面（View）、控制逻辑（Controller）三个部分，其架构图大致是这个样子：<br><a id="more"></a></p>
 <h2 id="MVC架构图">MVC架构图</h2><h3 id="Model（模型）">Model（模型）</h3><p>Model管理应用程序的数据，Model主要与业务数据相关，其不涉及控制层和表示层逻辑。当Model改变时，它会通过Observer模式（Publish/Subscribe）通知观察它的View，一个Model可以有多个观察它的View。</p>
 <p>Model与View和Controller的关系</p>
 <p>Model本身不涉及View和Controller的逻辑，它只在乎业务数据模型，并提供相应的接口对其内部数据进行CRUD操作</p>
@@ -288,6 +281,15 @@ MVC架构图Model（模型）Model管理应用程序的数据，Model主要与�
   
     
 <nav id="article-nav">
+  
+    <a href="/2015/09/11/post-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Javascript 面试中常见的算法题
+        
+      </div>
+    </a>
   
   
     <a href="/2015/08/03/vuejs/" id="article-nav-older" class="article-nav-link-wrap">

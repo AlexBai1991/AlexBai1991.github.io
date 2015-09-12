@@ -3,26 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>CSS中的媒体查询 | 千承的博客</title>
+  <title>CSS中的媒体查询 | 白进国</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="基本介绍通过不同的媒体类型和条件定义样式表规则。媒体查询让CSS可以更精确作用于不同的媒体类型和同一媒体的不同条件。媒体查询的大部分媒体特性都接受min和max用于表达“大于或等于”和“小与或等于”。如：width会有min-width和max-width。
-媒体查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。
-基本用法1234567891011@med">
+媒体查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS中的媒体查询">
 <meta property="og:url" content="http://yoursite.com/2015/06/12/CSS学习/index.html">
-<meta property="og:site_name" content="千承的博客">
+<meta property="og:site_name" content="白进国">
 <meta property="og:description" content="基本介绍通过不同的媒体类型和条件定义样式表规则。媒体查询让CSS可以更精确作用于不同的媒体类型和同一媒体的不同条件。媒体查询的大部分媒体特性都接受min和max用于表达“大于或等于”和“小与或等于”。如：width会有min-width和max-width。
-媒体查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。
-基本用法1234567891011@med">
-<meta property="og:updated_time" content="2015-08-02T13:39:54.000Z">
+媒体查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。">
+<meta property="og:updated_time" content="2015-09-12T02:21:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS中的媒体查询">
 <meta name="twitter:description" content="基本介绍通过不同的媒体类型和条件定义样式表规则。媒体查询让CSS可以更精确作用于不同的媒体类型和同一媒体的不同条件。媒体查询的大部分媒体特性都接受min和max用于表达“大于或等于”和“小与或等于”。如：width会有min-width和max-width。
-媒体查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。
-基本用法1234567891011@med">
+媒体查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。">
   
-    <link rel="alternative" href="/atom.xml" title="千承的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="白进国" type="application/atom+xml">
   
     <link rel="icon" href="source/img/coderwall.png">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
@@ -43,8 +40,6 @@
 		  <h1 class="header-author"><a href="/">Alex Bai</a></h1>
 		</hgroup>
 
-		
-		<p class="header-subtitle">快乐学习，快乐生活</p>
 		
 
 		
@@ -108,7 +103,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/闲谈/" style="font-size: 10px;">闲谈</a>
+						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/闲谈/" style="font-size: 10px;">闲谈</a>
 					</div>
 				</section>
 				
@@ -168,8 +163,6 @@
 			<hgroup>
 			  <h1 class="header-author">Alex Bai</h1>
 			</hgroup>
-			
-			<p class="header-subtitle">快乐学习，快乐生活</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -242,7 +235,7 @@
     <div class="article-entry " itemprop="articleBody">
       
         <h2 id="基本介绍">基本介绍</h2><p>通过不同的媒体类型和条件定义样式表规则。<br>媒体查询让CSS可以更精确作用于不同的媒体类型和同一媒体的不同条件。<br>媒体查询的大部分媒体特性都接受min和max用于表达“大于或等于”和“小与或等于”。如：width会有min-width和max-width。</p>
-<p>媒体查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。</p>
+<p>媒体查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。<br><a id="more"></a></p>
 <h2 id="基本用法">基本用法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@media mediatype and | not | only (media feature) &#123;</span><br><span class="line">    /* css code here */;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media screen and (width:800px)&#123;  &#125;  /* 直接在css中 */</span><br><span class="line"></span><br><span class="line">@import url(example.css) screen and (width:800px);  /* 直接在css中 */</span><br><span class="line"></span><br><span class="line">&lt;link media="screen and (width:800px)" rel="stylesheet" href="example.css" /&gt;  /* html中通过link标签 */</span><br><span class="line"></span><br><span class="line">&lt;?xml-stylesheet media="screen and (width:800px)" rel="stylesheet" href="example.css" ?&gt;  /* xml中 */</span><br></pre></td></tr></table></figure>
 <h4 id="各属性介绍">各属性介绍</h4><p>width: 定义输出设备中的页面可见区域宽度，与盒模型width不同，媒体特性width的取值只能是<length>。本特性接受min和max前缀，因此可以派生出min-width和max-width两个媒体特性。</length></p>
 <p>举例:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="at_rule">@<span class="keyword">media</span> all and (min-width: <span class="number">500px</span>) and (max-width: <span class="number">1000px</span>) </span>&#123;</span><br><span class="line">     <span class="tag">body</span> <span class="rules">&#123;</span><br><span class="line">          <span class="rule"><span class="attribute">background</span>:<span class="value"> red</span></span>;</span><br><span class="line">     &#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>

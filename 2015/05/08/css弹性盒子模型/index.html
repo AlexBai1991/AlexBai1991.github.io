@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>CSS中的弹性盒子模型 | 千承的博客</title>
+  <title>CSS中的弹性盒子模型 | 白进国</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。对于很多应用来讲，弹性盒改进了块模型，既不使用浮动，也不会在弹性盒容器与其内容之间合并外边距。
 1. 新版Flex Box定义弹性盒模型通过对父级元素设置display属性为flex | inline-flex属性定义该父级容器为弹性盒。为了兼容性，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS中的弹性盒子模型">
 <meta property="og:url" content="http://yoursite.com/2015/05/08/css弹性盒子模型/index.html">
-<meta property="og:site_name" content="千承的博客">
+<meta property="og:site_name" content="白进国">
 <meta property="og:description" content="CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。对于很多应用来讲，弹性盒改进了块模型，既不使用浮动，也不会在弹性盒容器与其内容之间合并外边距。
 1. 新版Flex Box定义弹性盒模型通过对父级元素设置display属性为flex | inline-flex属性定义该父级容器为弹性盒。为了兼容性，">
-<meta property="og:updated_time" content="2015-08-03T09:43:54.000Z">
+<meta property="og:updated_time" content="2015-09-12T02:21:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS中的弹性盒子模型">
 <meta name="twitter:description" content="CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。对于很多应用来讲，弹性盒改进了块模型，既不使用浮动，也不会在弹性盒容器与其内容之间合并外边距。
 1. 新版Flex Box定义弹性盒模型通过对父级元素设置display属性为flex | inline-flex属性定义该父级容器为弹性盒。为了兼容性，">
   
-    <link rel="alternative" href="/atom.xml" title="千承的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="白进国" type="application/atom+xml">
   
     <link rel="icon" href="source/img/coderwall.png">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
@@ -40,8 +40,6 @@
 		  <h1 class="header-author"><a href="/">Alex Bai</a></h1>
 		</hgroup>
 
-		
-		<p class="header-subtitle">快乐学习，快乐生活</p>
 		
 
 		
@@ -105,7 +103,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/闲谈/" style="font-size: 10px;">闲谈</a>
+						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/闲谈/" style="font-size: 10px;">闲谈</a>
 					</div>
 				</section>
 				
@@ -165,8 +163,6 @@
 			<hgroup>
 			  <h1 class="header-author">Alex Bai</h1>
 			</hgroup>
-			
-			<p class="header-subtitle">快乐学习，快乐生活</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -241,6 +237,7 @@
         <p>CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。对于很多应用来讲，弹性盒改进了块模型，既不使用浮动，也不会在弹性盒容器与其内容之间合并外边距。</p>
 <h1 id="1-_新版Flex_Box"><strong>1. 新版Flex Box</strong></h1><h3 id="定义弹性盒模型">定义弹性盒模型</h3><p>通过对父级元素设置display属性为<code>flex | inline-flex</code>属性定义该父级容器为弹性盒。<br>为了兼容性，注意要带上浏览器的厂商表示前缀。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.flexbox</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> flex</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> -webkit-flex</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="flex各属性介绍">flex各属性介绍</h3><p><code>flex: flex-grow | flex-shrink | flex-basis;</code><br>flex 是一个简写属性，它包括以下三个值：</p>
 <p>flex-grow: 默认值为0，定义了弹性盒中的子元素的拉伸因子，通过这个属性去等比划分弹性盒的宽度，注意这里划分的弹性盒父容器的宽度是除了文字等内容之外的剩余宽度。<br>flex-shrink: 默认为1，定义了弹性盒中的子元素的收缩因子，通过这个属性去等比收缩相应的宽度。<br>flex-basis: 默认为auto，定义了弹性盒中的子元素拉伸或者收缩的基准值，注意这个属性和flex-grow配合使用。</p>
 <p><code>flex-flow: flex-direction | flex-wrap;</code><br>flex-flow是一个简写属性，它包括以下两个值：</p>

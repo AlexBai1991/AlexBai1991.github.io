@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>CSS中的BFC | 千承的博客</title>
+  <title>CSS中的BFC | 白进国</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1. 了解BFC之前在了解什么是BFC之前，需要我们首先了解什么是Box、Formatting Context的概念。
 1.1 Box: CSS布局的基本单位在css布局中，我们最常见的布局方式就是盒子模型了。Box是CSS布局中的对象和基本单位，直观来说，就是一个页面是由很多的Box组成的。元素的类型和display属性决定了这个Box的类型。不同类型的Box会参与不同的Formatting C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS中的BFC">
 <meta property="og:url" content="http://yoursite.com/2015/03/27/cssbfc/index.html">
-<meta property="og:site_name" content="千承的博客">
+<meta property="og:site_name" content="白进国">
 <meta property="og:description" content="1. 了解BFC之前在了解什么是BFC之前，需要我们首先了解什么是Box、Formatting Context的概念。
 1.1 Box: CSS布局的基本单位在css布局中，我们最常见的布局方式就是盒子模型了。Box是CSS布局中的对象和基本单位，直观来说，就是一个页面是由很多的Box组成的。元素的类型和display属性决定了这个Box的类型。不同类型的Box会参与不同的Formatting C">
-<meta property="og:updated_time" content="2015-08-02T13:39:29.000Z">
+<meta property="og:updated_time" content="2015-09-12T02:22:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS中的BFC">
 <meta name="twitter:description" content="1. 了解BFC之前在了解什么是BFC之前，需要我们首先了解什么是Box、Formatting Context的概念。
 1.1 Box: CSS布局的基本单位在css布局中，我们最常见的布局方式就是盒子模型了。Box是CSS布局中的对象和基本单位，直观来说，就是一个页面是由很多的Box组成的。元素的类型和display属性决定了这个Box的类型。不同类型的Box会参与不同的Formatting C">
   
-    <link rel="alternative" href="/atom.xml" title="千承的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="白进国" type="application/atom+xml">
   
     <link rel="icon" href="source/img/coderwall.png">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
@@ -40,8 +40,6 @@
 		  <h1 class="header-author"><a href="/">Alex Bai</a></h1>
 		</hgroup>
 
-		
-		<p class="header-subtitle">快乐学习，快乐生活</p>
 		
 
 		
@@ -105,7 +103,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/闲谈/" style="font-size: 10px;">闲谈</a>
+						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/闲谈/" style="font-size: 10px;">闲谈</a>
 					</div>
 				</section>
 				
@@ -165,8 +163,6 @@
 			<hgroup>
 			  <h1 class="header-author">Alex Bai</h1>
 			</hgroup>
-			
-			<p class="header-subtitle">快乐学习，快乐生活</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -241,8 +237,7 @@
         <h1 id="1-_了解BFC之前">1. 了解BFC之前</h1><p>在了解什么是BFC之前，需要我们首先了解什么是Box、Formatting Context的概念。</p>
 <h3 id="1-1_Box:_CSS布局的基本单位">1.1 Box: CSS布局的基本单位</h3><p>在css布局中，我们最常见的布局方式就是盒子模型了。Box是CSS布局中的对象和基本单位，直观来说，就是一个页面是由很多的Box组成的。元素的类型和display属性决定了这个Box的类型。不同类型的Box会参与不同的Formatting Context，相应的Box内的元素也会以不同的方式渲染。</p>
 <p>盒子模型(Box Model)如果按照浏览器的实现方式进行划分的话，分为IE盒子模型和标准盒子模型两大类。</p>
-<p>其中IE盒子模型中的width和height包括border、padding和content部分，而标准盒子模型中的width和height则只是指content部分。</p>
-<p>Box的种类: </p>
+<p>其中IE盒子模型中的width和height包括border、padding和content部分，而标准盒子模型中的width和height则只是指content部分。<br><a id="more"></a><br>Box的种类: </p>
 <ol>
 <li>block-level box：display属性为block、list-item和table的元素</li>
 <li>inline-level box：display属性为inline、inline-block、inline-table的元素</li>

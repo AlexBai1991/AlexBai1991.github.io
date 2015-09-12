@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Javascript 面试中常见的算法题 | 白进国</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. 判断一个数是不是质数？
+问：你怎么去检查一个数是不是质数？答：一个质数就是只能被它本身和1整除，那么我开启一个while循环，然后每次加1
+
+代码如下：
+12345678910111213141516function isPrime(n)&amp;#123;    var divisor = 2;    while (n &amp;gt; divisor)&amp;#123;        if(n % divis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript 面试中常见的算法题">
+<meta property="og:url" content="http://yoursite.com/2015/09/11/post-1/index.html">
+<meta property="og:site_name" content="白进国">
+<meta property="og:description" content="1. 判断一个数是不是质数？
+问：你怎么去检查一个数是不是质数？答：一个质数就是只能被它本身和1整除，那么我开启一个while循环，然后每次加1
+
+代码如下：
+12345678910111213141516function isPrime(n)&amp;#123;    var divisor = 2;    while (n &amp;gt; divisor)&amp;#123;        if(n % divis">
+<meta property="og:updated_time" content="2015-09-12T02:19:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javascript 面试中常见的算法题">
+<meta name="twitter:description" content="1. 判断一个数是不是质数？
+问：你怎么去检查一个数是不是质数？答：一个质数就是只能被它本身和1整除，那么我开启一个while循环，然后每次加1
+
+代码如下：
+12345678910111213141516function isPrime(n)&amp;#123;    var divisor = 2;    while (n &amp;gt; divisor)&amp;#123;        if(n % divis">
+  
+    <link rel="alternative" href="/atom.xml" title="白进国" type="application/atom+xml">
+  
+    <link rel="icon" href="source/img/coderwall.png">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/portrait.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Alex Bai</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/aboutme">关于</a></li>
+				        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/闲谈/" style="font-size: 10px;">闲谈</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://bbs.byr.cn">北邮人论坛</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.html-js.com/">前端乱炖</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.w3cplus.com/">w3cplus</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">前端攻城狮一枚，爱好篮球足球，喜欢各种新奇玩意......</div>
+				</section>
+				
+			</div>
+		</div>
+
+					
+	</header>				
+</div>
+<nav class="contact-nav">
+	<div class="social">
+		
+			<a class="github" target="_blank" href="https://github.com/AlexBai1991" title="github">github</a>
+        
+			<a class="weibo" target="_blank" href="http://weibo.com/2465055362/profile?topnav=1&wvr=6" title="weibo">weibo</a>
+        
+			<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+        
+			<a class="mail" target="_blank" href="/alexbai1991@gmail.com" title="mail">mail</a>
+        
+	</div>
+</nav>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Alex Bai</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/portrait.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Alex Bai</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/aboutme">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/AlexBai1991" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/2465055362/profile?topnav=1&wvr=6" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="/alexbai1991@gmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-post-1" class="article article-type-post" itemscope itemprop="blogPost">
+
+  
+    <div class="article-meta">
+      <a href="/2015/09/11/post-1/" class="article-date">
+  	<time datetime="2015-09-10T16:10:56.000Z" itemprop="datePublished">2015-09-11 00:10</time>
+</a>
+    </div>
+  
+  
+    <div class="back-to-main"><a href="/">返回</a></div>
+  
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Javascript 面试中常见的算法题
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <h2 id="1-_判断一个数是不是质数？">1. 判断一个数是不是质数？</h2><blockquote>
+<p>问：你怎么去检查一个数是不是质数？<br>答：一个质数就是只能被它本身和1整除，那么我开启一个while循环，然后每次加1</p>
+</blockquote>
+<p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isPrime</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> divisor = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (n &gt; divisor)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n % divisor == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>; </span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            divisor++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">&gt; isPrime(<span class="number">137</span>);</span><br><span class="line">  = <span class="literal">true</span></span><br><span class="line">&gt; isPrime(<span class="number">237</span>);</span><br><span class="line">  = <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a> 
+<blockquote>
+<p>问：能优化下么？<br>答：可以，上面循环中我对<code>divisor</code>每次增加1，其实n&gt;3的时候<code>divisor</code>每次增加2就可以，因为一个数如果可以被一个偶数整除，那么它就可以被2整除。因此我可以减少一些循环次数。</p>
+<ul>
+<li>step-1: Any number will not be divisible by a number bigger than half of it. for example, 13 will never be divisible by 7, 8, 9 .. it could be as big as half of it for even number. for example, 16 will be divisible by 8 but will never be by 9, 10, 11, 12…</li>
+<li>Decision: a number will never be divisible by a number bigger than half of its values. So, we dont have to loop 50%</li>
+<li>step-2: Now, if a number is not divisible by 3. (if it is divisible by 3, then it wouldn’t be a prime number). then it would be divisible any number bigger than the 1/3 of its value. for example, 35 is not divisible by 3. hence it will be never divisible by any number bigger than 35/3 will never be divisible by 12, 13, 14 … if you take an even number like 36 it will never be divisible by 13, 14, 15</li>
+<li>Decision: a number could be divisible by numbers 1/3 of its value.</li>
+<li>step-3: For example u have the number 127. 127 is not divisible by 2 hence you should check upto 63.5. Secondly, 127 is not divisible by 3. So, you will check up to 127/3 approximately 42. It is not divisible by 5, divisor should be less than 127/5 approximately 25 not by 7. So, where should we stop?</li>
+<li>Decision: divisor would be less than Math.sqrt (n)</li>
+</ul>
+</blockquote>
+<p>优化后代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isPrime</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> divisor = <span class="number">3</span>,</span><br><span class="line">        limit = <span class="built_in">Math</span>.sqrt(n);</span><br><span class="line">    <span class="comment">// 2,3肯定是质数</span></span><br><span class="line">    <span class="keyword">if</span> (n === <span class="number">2</span> || n === <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 被2整除，肯定不是质数</span></span><br><span class="line">    <span class="keyword">if</span> (n % <span class="number">2</span> === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 循环遍历</span></span><br><span class="line">    <span class="keyword">while</span> (divisor &lt;= limit) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n % divisor === <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 当n&gt;3,不需要每次加1，直接加2即可</span></span><br><span class="line">            divisor += <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&gt; isPrime(<span class="number">137</span>);</span><br><span class="line">  = <span class="literal">true</span></span><br><span class="line">&gt; isPrime(<span class="number">237</span>);</span><br><span class="line">  = <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-_找出一个数的所有质数因子？">2. 找出一个数的所有质数因子？</h2><blockquote>
+<p>问：</p>
+</blockquote>
+<p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">primeFactors</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> divisor = <span class="number">2</span>,</span><br><span class="line">        factors = [];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (n &gt;= <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n % divisor === <span class="number">0</span>) &#123;</span><br><span class="line">            factors.push(divisor);</span><br><span class="line">            n = n / divisor;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            divisor++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> factors;</span><br><span class="line">&#125;</span><br><span class="line">&gt; primeFactors(<span class="number">12</span>)</span><br><span class="line">  = [<span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="3-_Fibonacci数？">3. Fibonacci数？</h2><blockquote>
+<p>问：如何找到第n个Fibonacci数<br>答：通过数组的形式，列出fibo数组，然后填充每一项。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fibonacci</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> fibo = [<span class="number">0</span>, <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">if</span> (n &lt; <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        fibo[i] = fibo[i - <span class="number">1</span>] + fibo[i - <span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fibo[n];</span><br><span class="line">&#125;</span><br><span class="line">&gt; fibonacci(<span class="number">5</span>)</span><br><span class="line">  = <span class="number">8</span></span><br><span class="line">&gt; fibonacci(<span class="number">6</span>)</span><br><span class="line">  = <span class="number">13</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>问：如果用递归怎么实现？<br>答：可以。</p>
+</blockquote>
+<p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fibonacci</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n &lt; <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> fibonacci(n - <span class="number">1</span>) + fibonacci(n - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line">&gt; fibonacci(<span class="number">5</span>)</span><br><span class="line">  = <span class="number">8</span></span><br><span class="line">&gt; fibonacci(<span class="number">6</span>)</span><br><span class="line">  = <span class="number">13</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-_找出两个数的最大公约数？">4. 找出两个数的最大公约数？</h2><p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">biggestFactor</span>(<span class="params">num1, num2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> divisor = <span class="number">2</span>,</span><br><span class="line">        biggestDivisor = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (num1 &gt;= divisor &amp;&amp; num2 &gt;= divisor) &#123;</span><br><span class="line">        <span class="keyword">if</span> (num1 % divisor === <span class="number">0</span> &amp;&amp; num2 % divisor === <span class="number">0</span>) &#123;</span><br><span class="line">            biggestDivisor = divisor;</span><br><span class="line">        &#125;</span><br><span class="line">        divisor++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> biggestDivisor;</span><br><span class="line">&#125;</span><br><span class="line">&gt; biggestFactor(<span class="number">12</span>,<span class="number">16</span>)</span><br><span class="line">  = <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<p>还有另一种解法（但是没看懂）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greatestCommonDivisor</span>(<span class="params">a, b</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(b == <span class="number">0</span>)</span><br><span class="line">     <span class="keyword">return</span> a;</span><br><span class="line">   <span class="keyword">else</span> </span><br><span class="line">     <span class="keyword">return</span> greatestCommonDivisor(b, a%b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="5-_数组去重？">5. 数组去重？</h2><p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">duplicateArr</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">0</span>,</span><br><span class="line">        len = arr.length,</span><br><span class="line">        res = [],</span><br><span class="line">        exists = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> elm = arr[i];</span><br><span class="line">        <span class="keyword">if</span> (!exists[elm]) &#123;</span><br><span class="line">            res.push(elm);</span><br><span class="line">            exists[elm] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="6-_合并两个排序数组？">6. 合并两个排序数组？</h2><p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">merge</span>(<span class="params">arr1, arr2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> iA = <span class="number">0</span>, iB = <span class="number">0</span>,</span><br><span class="line">        lenA = arr1.length,</span><br><span class="line">        lenB = arr2.length,</span><br><span class="line">        res = [];</span><br><span class="line">    <span class="keyword">while</span> (iA &lt; lenA &amp;&amp; iB &lt; lenB) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr1[iA] &lt; arr2[iB]) &#123;</span><br><span class="line">            res.push(arr1[iA++]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            res.push(arr2[iB++]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res.concat(arr1.slice(iA), arr2.slice(iB));</span><br><span class="line">&#125;</span><br><span class="line">&gt; merge([<span class="number">2</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">9</span>], [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">29</span>])</span><br><span class="line">  = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">29</span>]</span><br></pre></td></tr></table></figure>
+<p>还可以下面这样：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">merge</span>(<span class="params">arr1, arr2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> res = [];</span><br><span class="line">    <span class="keyword">while</span> (arr1.length &gt; <span class="number">0</span> &amp;&amp; arr2.length &gt;<span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr1[<span class="number">0</span>] &lt; arr2[<span class="number">0</span>]) &#123;</span><br><span class="line">            res.push(arr1.shift());</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            res.push(arr2.shift());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res.concat(arr1, arr2);</span><br><span class="line">&#125;</span><br><span class="line">&gt; merge([<span class="number">2</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">9</span>], [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">29</span>])</span><br><span class="line">  = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">29</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="7-_字符反转？">7. 字符反转？</h2><p>方法1：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reverseStr</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> resStr = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = str.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        resStr += str[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> resStr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法2：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reverseStr</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!str || <span class="keyword">typeof</span> str !== <span class="string">'string'</span> || str.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> strArr = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = str.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        strArr.push(str[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> strArr.join(<span class="string">''</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法3：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reverseStr</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> strArr = str.split(<span class="string">''</span>);</span><br><span class="line">    <span class="keyword">var</span> len = strArr.length;</span><br><span class="line">    <span class="keyword">var</span> middleIndex = <span class="built_in">Math</span>.floor(len / <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= middleIndex; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> temp = strArr[i];</span><br><span class="line">        strArr[i] = strArr[len - i - <span class="number">1</span>];</span><br><span class="line">        strArr[len - i - <span class="number">1</span>] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> strArr.join(<span class="string">''</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法4：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reverseStr</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (str.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> reverse(str.substr(<span class="number">1</span>)) + str.charAt(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法5：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reverseStr</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!str || srt.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">var</span> strArr = str.split(<span class="string">''</span>).reverse();</span><br><span class="line">    <span class="keyword">return</span> strArr.join(<span class="string">''</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="8-_反转语句？">8. 反转语句？</h2><p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reverseWords</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> rev = [], </span><br><span class="line">        wordLen = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = str.length-<span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">if</span>(str[i] === <span class="string">' '</span> || i === <span class="number">0</span>)&#123;</span><br><span class="line">            rev.push(str.substr(i,wordLen+<span class="number">1</span>));</span><br><span class="line">            wordLen = <span class="number">0</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            wordLen++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> rev.join(<span class="string">' '</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优化代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reverseWords</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> str.split(<span class="string">' '</span>).reverse();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="9-_寻找一个数组中的最大的两个值的和？">9. 寻找一个数组中的最大的两个值的和？</h2><p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">topSum</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> biggest = arr[<span class="number">0</span>],</span><br><span class="line">        second = arr[<span class="number">1</span>],</span><br><span class="line">        i = <span class="number">2</span>,</span><br><span class="line">        len = arr.length;</span><br><span class="line">    <span class="keyword">if</span> (biggest &lt; second) &#123;</span><br><span class="line">        biggest = arr[<span class="number">1</span>];</span><br><span class="line">        second = arr[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (biggest &lt; arr[i]) &#123;</span><br><span class="line">            second = biggest;</span><br><span class="line">            biggest = arr[i];</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (second &lt; arr[i]) &#123;</span><br><span class="line">            second = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> biggest + second;</span><br><span class="line">&#125;</span><br><span class="line">&gt; topSum([<span class="number">1</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">12</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">  = <span class="number">21</span></span><br></pre></td></tr></table></figure>
+<h2 id="10-_给定两个无序数组，找出是否能有两个元素想加等于指定的一个数，返回这样的两个数的下标？">10. 给定两个无序数组，找出是否能有两个元素想加等于指定的一个数，返回这样的两个数的下标？</h2><p>思路：最先想到的是双重循环</p>
+<p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sumFinder</span>(<span class="params">arr, num</span>) </span>&#123; </span><br><span class="line">    <span class="keyword">var</span> len = arr.length;</span><br><span class="line">    <span class="keyword">var</span> res = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> j = i + <span class="number">1</span>; j &lt; len; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[i] + arr[j] === num) &#123;</span><br><span class="line">                res.push(&#123;</span><br><span class="line">                    index1: i,</span><br><span class="line">                    index2: j</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(res);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>问：有没有更好的方法呢？<br>答：</p>
+</blockquote>
+<p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sumFinder</span>(<span class="params">arr, num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> differ = &#123;&#125;,</span><br><span class="line">        substract,</span><br><span class="line">        i = <span class="number">0</span>;</span><br><span class="line">        len = arr.length;</span><br><span class="line">    <span class="keyword">for</span> (; i &lt; len; i++) &#123;</span><br><span class="line">        substract = num - arr[i];</span><br><span class="line">        <span class="keyword">if</span> (!differ[substract]) &#123;</span><br><span class="line">            differ[arr[i]] = <span class="literal">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>问：还有没更好的办法？<br>答：</p>
+</blockquote>
+<p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sumFinder</span>(<span class="params">arr, num</span>) </span>&#123;</span><br><span class="line">    arr = arr.sort(<span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a - b;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="built_in">console</span>.log(arr);</span><br><span class="line">    <span class="keyword">var</span> iLeft = <span class="number">0</span>, </span><br><span class="line">        iRight = arr.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">var</span> res = [];</span><br><span class="line">    <span class="keyword">while</span> (iLeft &lt; iRight) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span> (arr[iLeft] + arr[iRight] &gt; num) &#123;</span><br><span class="line">            iRight--;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[iLeft] + arr[iRight] &lt; num) &#123;</span><br><span class="line">            iLeft++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            res.push(&#123;</span><br><span class="line">                index1: iLeft,</span><br><span class="line">                index2: iRight</span><br><span class="line">            &#125;);</span><br><span class="line">            iLeft++;</span><br><span class="line">            iRight--;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(res);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&lt;%- post.more %&gt;</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/08/15/post/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MVC, MVP, MVVM</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Alex Bai
+    	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
