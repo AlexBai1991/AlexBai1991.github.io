@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="白进国">
 <meta property="og:description" content="虽然到现在接触前端这一行也有将近一年半的时间了，自己对于前端模块化开发这一块的概念还一直是停留在知道前端领域有AMD和CMD这两个规范，它们是用来解决你的前端开发流程中的模块化加载的问题的。但是却没有在项目中的真正实践，所以这段时间要好好的花时间学习下这块的内容，并且能在以后的项目中真正的去实践一把。
 对于AMD和CMD这两个东西，一个是异步模块规范(Asynchronous Module Def">
-<meta property="og:updated_time" content="2015-09-12T08:18:10.000Z">
+<meta property="og:updated_time" content="2015-09-12T15:55:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学学AMD & CMD">
 <meta name="twitter:description" content="虽然到现在接触前端这一行也有将近一年半的时间了，自己对于前端模块化开发这一块的概念还一直是停留在知道前端领域有AMD和CMD这两个规范，它们是用来解决你的前端开发流程中的模块化加载的问题的。但是却没有在项目中的真正实践，所以这段时间要好好的花时间学习下这块的内容，并且能在以后的项目中真正的去实践一把。
@@ -252,7 +252,7 @@
 <p>module对象就代表当前模块变量本身</p>
 <p>举例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a.js</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(’a.js’);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">     a: a     </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">var</span> AModule = <span class="built_in">require</span>(‘./a.js’);</span><br><span class="line">AModule.a();</span><br></pre></td></tr></table></figure></p>
 <p>CommonJS主要适用于服务器端js模块的管理（尤其是Node.js），因为在服务端去加载某个依赖文件都是去读取本地硬盘的操作，速度很快；但是对于浏览器端来说同步的去加载某个模块可能会很慢（因为要通过网络向服务端去请求这个模块）。</p>
-<p>对CMD来说，它的主要特点是：同步加载模块，依赖就近，延迟加载。</p>
+<p>对CMD来说，它的主要特点是：同步加载模块，依赖就近，提前执行。</p>
 <p>下表展示了浏览器端js和服务端js的区别：</p>
 <p>服务器端js<br>浏览器端js<br>相同的代码需要多次执行<br>代码需要从一个服务器端分发到各个浏览器端执行<br>CPU和内存资源是瓶颈<br>带宽是瓶颈<br>加载时需要从磁盘中进行加载<br>加载时需要从</p>
 <p>但是对于前端来说，一个最大的问题就是在浏览器加载脚本天生不支持同步的加载，无法通过文件I/O同步的require加载一个js脚本。</p>
@@ -287,8 +287,8 @@
     </a>
   
   
-    <a href="/2015/08/03/vuejs/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">【翻译】Vue.js学习笔记</div>
+    <a href="/2015/08/09/同步和异步/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">谈谈 Javascript 中的&quot;同步&quot;和&quot;异步&quot;</div>
       <strong class="article-nav-caption">></strong>
     </a>
   

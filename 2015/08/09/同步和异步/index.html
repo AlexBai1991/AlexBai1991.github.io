@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>【翻译】Vue.js学习笔记 | 白进国</title>
+  <title>谈谈 Javascript 中的&quot;同步&quot;和&quot;异步&quot; | 白进国</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="v
-REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
+  <meta name="description" content="我们都知道，Javascript语言的执行环境是”单线程”（single thread）的。所谓”单线程”，就是指对解析器来说一次只能完成一件任务，如果有多个任务的话，那么就必须排队，前面一个任务完成，再去执行后面一个任务，以此类推。
+这种模式的好处是实现起来比较简单，执行环境相对单纯；坏处是只要有一个任务耗时很长，后面的任务都必须排队等着，会拖延整个程序的执行。常见的浏览器无响应（假死），往往就">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【翻译】Vue.js学习笔记">
-<meta property="og:url" content="http://baijinguo.com/2015/08/03/vuejs/index.html">
+<meta property="og:title" content="谈谈 Javascript 中的"同步"和"异步"">
+<meta property="og:url" content="http://baijinguo.com/2015/08/09/同步和异步/index.html">
 <meta property="og:site_name" content="白进国">
-<meta property="og:description" content="v
-REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
-<meta property="og:updated_time" content="2015-09-12T07:48:16.000Z">
+<meta property="og:description" content="我们都知道，Javascript语言的执行环境是”单线程”（single thread）的。所谓”单线程”，就是指对解析器来说一次只能完成一件任务，如果有多个任务的话，那么就必须排队，前面一个任务完成，再去执行后面一个任务，以此类推。
+这种模式的好处是实现起来比较简单，执行环境相对单纯；坏处是只要有一个任务耗时很长，后面的任务都必须排队等着，会拖延整个程序的执行。常见的浏览器无响应（假死），往往就">
+<meta property="og:updated_time" content="2015-09-12T15:57:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【翻译】Vue.js学习笔记">
-<meta name="twitter:description" content="v
-REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
+<meta name="twitter:title" content="谈谈 Javascript 中的"同步"和"异步"">
+<meta name="twitter:description" content="我们都知道，Javascript语言的执行环境是”单线程”（single thread）的。所谓”单线程”，就是指对解析器来说一次只能完成一件任务，如果有多个任务的话，那么就必须排队，前面一个任务完成，再去执行后面一个任务，以此类推。
+这种模式的好处是实现起来比较简单，执行环境相对单纯；坏处是只要有一个任务耗时很长，后面的任务都必须排队等着，会拖延整个程序的执行。常见的浏览器无响应（假死），往往就">
   
     <link rel="alternative" href="/atom.xml" title="白进国" type="application/atom+xml">
   
@@ -192,12 +192,12 @@ REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-vuejs" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-同步和异步" class="article article-type-post" itemscope itemprop="blogPost">
 
   
     <div class="article-meta">
-      <a href="/2015/08/03/vuejs/" class="article-date">
-  	<time datetime="2015-08-03T03:21:06.000Z" itemprop="datePublished">2015-08-03 11:21</time>
+      <a href="/2015/08/09/同步和异步/" class="article-date">
+  	<time datetime="2015-08-09T11:58:29.000Z" itemprop="datePublished">2015-08-09 19:58</time>
 </a>
     </div>
   
@@ -214,7 +214,7 @@ REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
         
   
     <h1 class="article-title" itemprop="name">
-      【翻译】Vue.js学习笔记
+      谈谈 Javascript 中的&quot;同步&quot;和&quot;异步&quot;
     </h1>
   
 
@@ -222,10 +222,6 @@ REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译/">翻译</a></li></ul>
-	</div>
-
         
 
         <div class="clearfix"></div>
@@ -234,8 +230,12 @@ REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
     
     <div class="article-entry " itemprop="articleBody">
       
-        <p>v</p>
-<h1 id="REF">REF</h1><p><a href="http://tw93.github.io/2015-02-04/vue-angular-avalon-1.html" target="_blank" rel="external">Vue.js &amp; Angular.js &amp; Avalon.js</a></p>
+        <p>我们都知道，Javascript语言的执行环境是”单线程”（single thread）的。所谓”单线程”，就是指对解析器来说一次只能完成一件任务，如果有多个任务的话，那么就必须排队，前面一个任务完成，再去执行后面一个任务，以此类推。</p>
+<p>这种模式的好处是实现起来比较简单，执行环境相对单纯；坏处是只要有一个任务耗时很长，后面的任务都必须排队等着，会拖延整个程序的执行。常见的浏览器无响应（假死），往往就是因为某一段Javascript代码长时间运行（比如死循环），导致整个页面卡在这个地方，其他任务无法执行。</p>
+<a id="more"></a>
+<p>为了解决这个问题，Javascript语言将任务的执行模式分成两种：同步（Synchronous）和异步（Asynchronous）。</p>
+<p>“同步模式”就是上一段的模式，后一个任务等待前一个任务结束，然后再执行，程序的执行顺序与任务的排列顺序是一致的、同步的；”异步模式”则完全不同，每一个任务有一个或多个回调函数（callback），前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的。</p>
+<p>“异步模式”非常重要。在浏览器端，耗时很长的操作都应该异步执行，避免浏览器失去响应，最好的例子就是Ajax操作。在服务器端，”异步模式”甚至是唯一的模式，因为执行环境是单线程的，如果允许同步执行所有http请求，服务器性能会急剧下降，很快就会失去响应。</p>
 
       
     </div>
@@ -245,18 +245,18 @@ REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
     
 <nav id="article-nav">
   
-    <a href="/2015/08/09/同步和异步/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/08/12/amdcmd/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          谈谈 Javascript 中的&quot;同步&quot;和&quot;异步&quot;
+          学学AMD &amp; CMD
         
       </div>
     </a>
   
   
-    <a href="/2015/06/12/CSS学习/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS中的媒体查询</div>
+    <a href="/2015/08/03/vuejs/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【翻译】Vue.js学习笔记</div>
       <strong class="article-nav-caption">></strong>
     </a>
   

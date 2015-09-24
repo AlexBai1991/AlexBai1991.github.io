@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>【翻译】Vue.js学习笔记 | 白进国</title>
+  <title>Javascript 笔试题总结 | 白进国</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="v
-REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
+  <meta name="description" content="给定一个URL字符串，要求用js实现一个函数，找出其中的query值例如：URL：http://www.qunar.com/plane/queryPlane.html?startTime=xxxx&amp;amp;endTime=xxxxx#tags
+123456789101112function getQueryParam(url, name) &amp;#123;    var a = document.cr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【翻译】Vue.js学习笔记">
-<meta property="og:url" content="http://baijinguo.com/2015/08/03/vuejs/index.html">
+<meta property="og:title" content="Javascript 笔试题总结">
+<meta property="og:url" content="http://baijinguo.com/2015/09/16/jsbishiti/index.html">
 <meta property="og:site_name" content="白进国">
-<meta property="og:description" content="v
-REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
-<meta property="og:updated_time" content="2015-09-12T07:48:16.000Z">
+<meta property="og:description" content="给定一个URL字符串，要求用js实现一个函数，找出其中的query值例如：URL：http://www.qunar.com/plane/queryPlane.html?startTime=xxxx&amp;amp;endTime=xxxxx#tags
+123456789101112function getQueryParam(url, name) &amp;#123;    var a = document.cr">
+<meta property="og:updated_time" content="2015-09-17T13:07:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【翻译】Vue.js学习笔记">
-<meta name="twitter:description" content="v
-REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
+<meta name="twitter:title" content="Javascript 笔试题总结">
+<meta name="twitter:description" content="给定一个URL字符串，要求用js实现一个函数，找出其中的query值例如：URL：http://www.qunar.com/plane/queryPlane.html?startTime=xxxx&amp;amp;endTime=xxxxx#tags
+123456789101112function getQueryParam(url, name) &amp;#123;    var a = document.cr">
   
     <link rel="alternative" href="/atom.xml" title="白进国" type="application/atom+xml">
   
@@ -192,12 +192,12 @@ REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-vuejs" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-jsbishiti" class="article article-type-post" itemscope itemprop="blogPost">
 
   
     <div class="article-meta">
-      <a href="/2015/08/03/vuejs/" class="article-date">
-  	<time datetime="2015-08-03T03:21:06.000Z" itemprop="datePublished">2015-08-03 11:21</time>
+      <a href="/2015/09/16/jsbishiti/" class="article-date">
+  	<time datetime="2015-09-16T09:02:10.000Z" itemprop="datePublished">2015-09-16 17:02</time>
 </a>
     </div>
   
@@ -214,7 +214,7 @@ REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
         
   
     <h1 class="article-title" itemprop="name">
-      【翻译】Vue.js学习笔记
+      Javascript 笔试题总结
     </h1>
   
 
@@ -223,7 +223,7 @@ REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译/">翻译</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
 	</div>
 
         
@@ -234,8 +234,8 @@ REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
     
     <div class="article-entry " itemprop="articleBody">
       
-        <p>v</p>
-<h1 id="REF">REF</h1><p><a href="http://tw93.github.io/2015-02-04/vue-angular-avalon-1.html" target="_blank" rel="external">Vue.js &amp; Angular.js &amp; Avalon.js</a></p>
+        <p>给定一个URL字符串，要求用js实现一个函数，找出其中的query值<br>例如：URL：<a href="http://www.qunar.com/plane/queryPlane.html?startTime=xxxx&amp;endTime=xxxxx#tags" target="_blank" rel="external">http://www.qunar.com/plane/queryPlane.html?startTime=xxxx&amp;endTime=xxxxx#tags</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getQueryParam</span>(<span class="params">url, name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</span><br><span class="line">    a.href = url;</span><br><span class="line">    <span class="keyword">var</span> query = a.search;</span><br><span class="line">    <span class="keyword">var</span> len = query.length;</span><br><span class="line">    <span class="keyword">var</span> reg = <span class="regexp">/[?&amp;]([^\d]\w+)=(\w+)/gi</span>; </span><br><span class="line">    <span class="keyword">var</span> res = reg.exec(query);</span><br><span class="line">    <span class="keyword">while</span> (reg.lastIndex &lt; len &amp;&amp; res[<span class="number">1</span>] &amp;&amp; res[<span class="number">1</span>] !== name) &#123;</span><br><span class="line">        res = reg.exec(query);</span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> res[<span class="number">2</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -245,18 +245,9 @@ REFVue.js &amp;amp; Angular.js &amp;amp; Avalon.js">
     
 <nav id="article-nav">
   
-    <a href="/2015/08/09/同步和异步/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          谈谈 Javascript 中的&quot;同步&quot;和&quot;异步&quot;
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/06/12/CSS学习/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS中的媒体查询</div>
+    <a href="/2015/09/16/arraysort/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Javascript 中的数组排序算法总结</div>
       <strong class="article-nav-caption">></strong>
     </a>
   

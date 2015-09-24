@@ -190,6 +190,185 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-jsbishiti" class="article article-type-post" itemscope itemprop="blogPost">
+
+  
+    <div class="article-meta">
+      <a href="/2015/09/16/jsbishiti/" class="article-date">
+  	<time datetime="2015-09-16T09:02:10.000Z" itemprop="datePublished">2015-09-16 17:02</time>
+</a>
+    </div>
+  
+  
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/16/jsbishiti/">Javascript 笔试题总结</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry  article-entry-index " itemprop="articleBody">
+      
+        <p>给定一个URL字符串，要求用js实现一个函数，找出其中的query值<br>例如：URL：<a href="http://www.qunar.com/plane/queryPlane.html?startTime=xxxx&amp;endTime=xxxxx#tags" target="_blank" rel="external">http://www.qunar.com/plane/queryPlane.html?startTime=xxxx&amp;endTime=xxxxx#tags</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getQueryParam</span>(<span class="params">url, name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</span><br><span class="line">    a.href = url;</span><br><span class="line">    <span class="keyword">var</span> query = a.search;</span><br><span class="line">    <span class="keyword">var</span> len = query.length;</span><br><span class="line">    <span class="keyword">var</span> reg = <span class="regexp">/[?&amp;]([^\d]\w+)=(\w+)/gi</span>; </span><br><span class="line">    <span class="keyword">var</span> res = reg.exec(query);</span><br><span class="line">    <span class="keyword">while</span> (reg.lastIndex &lt; len &amp;&amp; res[<span class="number">1</span>] &amp;&amp; res[<span class="number">1</span>] !== name) &#123;</span><br><span class="line">        res = reg.exec(query);</span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> res[<span class="number">2</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-arraysort" class="article article-type-post" itemscope itemprop="blogPost">
+
+  
+    <div class="article-meta">
+      <a href="/2015/09/16/arraysort/" class="article-date">
+  	<time datetime="2015-09-15T16:30:37.000Z" itemprop="datePublished">2015-09-16 00:30</time>
+</a>
+    </div>
+  
+  
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/16/arraysort/">Javascript 中的数组排序算法总结</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry  article-entry-index " itemprop="articleBody">
+      
+        <p>javascript 中的数组排序算法主要有：冒泡排序、插入排序、快速排序、递归排序。</p>
+<p>下满的这些例子都是各个排序算法的具体实现。<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/09/16/arraysort/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-singleton" class="article article-type-post" itemscope itemprop="blogPost">
+
+  
+    <div class="article-meta">
+      <a href="/2015/09/15/singleton/" class="article-date">
+  	<time datetime="2015-09-15T02:42:59.000Z" itemprop="datePublished">2015-09-15 10:42</time>
+</a>
+    </div>
+  
+  
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/15/singleton/">Javascript 中的单例模式</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry  article-entry-index " itemprop="articleBody">
+      
+        <p>所谓单例模式，即是限定一个对象生成的实例数只有一个，这个唯一的实例就是单例。</p>
+<p>举个最简单的例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> user = &#123;  </span><br><span class="line">    firstName: <span class="string">'John'</span>,</span><br><span class="line">    lastName: <span class="string">'Doe'</span>,</span><br><span class="line">    sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>这个user就是一个单例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mySingleton = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Instance stores a reference to the Singleton</span></span><br><span class="line">  <span class="keyword">var</span> instance;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Singleton</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Private methods and variables</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">privateMethod</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log( <span class="string">"I am private"</span> );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> privateVariable = <span class="string">"Im also private"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// Public methods and variables</span></span><br><span class="line">      publicMethod: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log( <span class="string">"The public can see me!"</span> );</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">      publicProperty: <span class="string">"I am also public"</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Get the Singleton instance if one exists</span></span><br><span class="line">    <span class="comment">// or create one if it doesn't</span></span><br><span class="line">    getInstance: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> ( !instance ) &#123;</span><br><span class="line">        instance = init();</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Usage:</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> singleA = mySingleton.getInstance();  </span><br><span class="line"><span class="keyword">var</span> singleB = mySingleton.getInstance();  </span><br><span class="line"><span class="built_in">console</span>.log( singleA === singleB ); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h2 id="参考：">参考：</h2><p><a href="http://robdodson.me/javascript-design-patterns-singleton/" target="_blank" rel="external">http://robdodson.me/javascript-design-patterns-singleton/</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-post-1" class="article article-type-post" itemscope itemprop="blogPost">
 
   
@@ -353,6 +532,65 @@
       
         <p class="article-more-link">
           <a  href="/2015/08/12/amdcmd/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-同步和异步" class="article article-type-post" itemscope itemprop="blogPost">
+
+  
+    <div class="article-meta">
+      <a href="/2015/08/09/同步和异步/" class="article-date">
+  	<time datetime="2015-08-09T11:58:29.000Z" itemprop="datePublished">2015-08-09 19:58</time>
+</a>
+    </div>
+  
+  
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/09/同步和异步/">谈谈 Javascript 中的&quot;同步&quot;和&quot;异步&quot;</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry  article-entry-index " itemprop="articleBody">
+      
+        <p>我们都知道，Javascript语言的执行环境是”单线程”（single thread）的。所谓”单线程”，就是指对解析器来说一次只能完成一件任务，如果有多个任务的话，那么就必须排队，前面一个任务完成，再去执行后面一个任务，以此类推。</p>
+<p>这种模式的好处是实现起来比较简单，执行环境相对单纯；坏处是只要有一个任务耗时很长，后面的任务都必须排队等着，会拖延整个程序的执行。常见的浏览器无响应（假死），往往就是因为某一段Javascript代码长时间运行（比如死循环），导致整个页面卡在这个地方，其他任务无法执行。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/08/09/同步和异步/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -540,256 +778,6 @@
       
         <p class="article-more-link">
           <a  href="/2015/05/08/css弹性盒子模型/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-csstwocolumn" class="article article-type-post" itemscope itemprop="blogPost">
-
-  
-    <div class="article-meta">
-      <a href="/2015/04/02/csstwocolumn/" class="article-date">
-  	<time datetime="2015-04-02T04:31:23.000Z" itemprop="datePublished">2015-04-02 12:31</time>
-</a>
-    </div>
-  
-  
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/02/csstwocolumn/">CSS中的两栏等高布局</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry  article-entry-index " itemprop="articleBody">
-      
-        <h1 id="两栏等高布局">两栏等高布局</h1><h3 id="1-_抵消外边距和内边距">1. 抵消外边距和内边距</h3><p>HTML部分:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"content"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"left"</span> <span class="attribute">class</span>=<span class="value">"row"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="title">p</span>&gt;</span>left<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="title">p</span>&gt;</span>left<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="title">p</span>&gt;</span>left<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="title">p</span>&gt;</span>left<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="title">p</span>&gt;</span>left<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="title">p</span>&gt;</span>left<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="title">p</span>&gt;</span>left<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="title">p</span>&gt;</span>left<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"right"</span> <span class="attribute">class</span>=<span class="value">"row"</span>&gt;</span>right<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/04/02/csstwocolumn/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-cssbfc" class="article article-type-post" itemscope itemprop="blogPost">
-
-  
-    <div class="article-meta">
-      <a href="/2015/03/27/cssbfc/" class="article-date">
-  	<time datetime="2015-03-27T02:36:04.000Z" itemprop="datePublished">2015-03-27 10:36</time>
-</a>
-    </div>
-  
-  
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/27/cssbfc/">CSS中的BFC</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry  article-entry-index " itemprop="articleBody">
-      
-        <h1 id="1-_了解BFC之前">1. 了解BFC之前</h1><p>在了解什么是BFC之前，需要我们首先了解什么是Box、Formatting Context的概念。</p>
-<h3 id="1-1_Box:_CSS布局的基本单位">1.1 Box: CSS布局的基本单位</h3><p>在css布局中，我们最常见的布局方式就是盒子模型了。Box是CSS布局中的对象和基本单位，直观来说，就是一个页面是由很多的Box组成的。元素的类型和display属性决定了这个Box的类型。不同类型的Box会参与不同的Formatting Context，相应的Box内的元素也会以不同的方式渲染。</p>
-<p>盒子模型(Box Model)如果按照浏览器的实现方式进行划分的话，分为IE盒子模型和标准盒子模型两大类。</p>
-<p>其中IE盒子模型中的width和height包括border、padding和content部分，而标准盒子模型中的width和height则只是指content部分。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/03/27/cssbfc/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-javascript-deepclone" class="article article-type-post" itemscope itemprop="blogPost">
-
-  
-    <div class="article-meta">
-      <a href="/2015/03/01/javascript-deepclone/" class="article-date">
-  	<time datetime="2015-03-01T08:42:40.000Z" itemprop="datePublished">2015-03-01 16:42</time>
-</a>
-    </div>
-  
-  
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/01/javascript-deepclone/">Javascript中的深拷贝</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry  article-entry-index " itemprop="articleBody">
-      
-        <h2 id="1-_第一种实现方法">1. 第一种实现方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">copy</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> obj !== <span class="string">'object'</span> || obj === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> copyObj,</span><br><span class="line">        _toString = <span class="built_in">Object</span>.prototype.toString;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (_toString.call(obj) === <span class="string">'[object Object]'</span>) &#123;</span><br><span class="line">        copyObj = &#123;&#125;;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (_toString.call(obj) === <span class="string">'[object Array]'</span>) &#123;</span><br><span class="line">        copyObj = [];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> name <span class="keyword">in</span> obj) &#123;</span><br><span class="line">        copyObj[name] = copy(obj[name]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> copyObj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/03/01/javascript-deepclone/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-httpmethod" class="article article-type-post" itemscope itemprop="blogPost">
-
-  
-    <div class="article-meta">
-      <a href="/2015/02/24/httpmethod/" class="article-date">
-  	<time datetime="2015-02-24T09:25:02.000Z" itemprop="datePublished">2015-02-24 17:25</time>
-</a>
-    </div>
-  
-  
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/24/httpmethod/">常见的http方法介绍</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry  article-entry-index " itemprop="articleBody">
-      
-        <h2 id="1-_GET">1. GET</h2><p>get方法是最常见的请求方法，通常用于向服务器请求(获取)某个资源。</p>
-<p>发送一个get请求一般会附带一些参数，这些参数会附在请求链接的后面，由此可见，get方法安全性较低，不适合在对安全性要求较高的场合使用。</p>
-<p>一般get请求能向服务器请求的数据量较小。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/02/24/httpmethod/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
