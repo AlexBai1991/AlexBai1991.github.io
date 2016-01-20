@@ -989,21 +989,21 @@ a {
 }
 .article.show {
   visibility: visible;
-  -webkit-animation: cd-bounce-1 0.6s;
+  /*-webkit-animation: cd-bounce-1 0.6s;
   -moz-animation: cd-bounce-1 0.6s;
   -webkit-animation: cd-bounce-1 0.6s;
   -moz-animation: cd-bounce-1 0.6s;
   -ms-animation: cd-bounce-1 0.6s;
-  animation: cd-bounce-1 0.6s;
+  animation: cd-bounce-1 0.6s;*/
 }
-.article.show:hover {
+/*.article.show:hover {
   -webkit-transform: scale(1.01);
   -moz-transform: scale(1.01);
   -ms-transform: scale(1.01);
   transform: scale(1.01);
   -webkit-box-shadow: 0 1px 9px rgba(0,0,0,0.35);
   box-shadow: 0 1px 9px rgba(0,0,0,0.35);
-}
+}*/
 .article.hidden {
   visibility: hidden;
 }
